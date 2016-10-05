@@ -13,13 +13,13 @@ Module.register("waswarheute",{
 	getDom: function() {
 		var wrapper = document.createElement("div");
 		
-		wrapper.innerHTML = this.config.feedURL;
+		wrapper.innerHTML = this.config.feedURL + getList();
 		
 		return wrapper;
 	},
 	
 	
 	getList: function() {
-		
+		return("hallo");
 	}
 });
