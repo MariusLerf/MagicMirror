@@ -18,7 +18,7 @@ Module.register("waswarheute",{
 	getDom: function() {
 		var wrapper = document.createElement("div");
 		
-		wrapper.innerHTML = this.config.feedURL + getList();
+		wrapper.innerHTML = this.config.feedURL;
 		
 		return wrapper;
 	}
