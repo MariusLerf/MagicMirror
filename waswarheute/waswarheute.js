@@ -10,7 +10,7 @@ Module.register("waswarheute",{
 	},
 	
 	
-	getList: function() {
+	getList: function(url) {
 		return("hallo");
 	},
 
@@ -18,7 +18,7 @@ Module.register("waswarheute",{
 	getDom: function() {
 		var wrapper = document.createElement("div");
 		
-		wrapper.innerHTML = this.config.feedURL + this.getList();
+		wrapper.innerHTML = this.getList(this.config.feedURL);
 		
 		return wrapper;
 	}
