@@ -6,7 +6,7 @@ Module.register("waswarheute",{
 
 	// Default module config.
 	defaults: {
-		text: "Hello World!"
+		text: "https://de.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday&feedformat=atom"
 	},
 
 	// Override dom generator.
