@@ -9,11 +9,11 @@ Module.register("waswarheute",{
 		feedURL: ""
 	},
 	
-	getScripts: function() {
+	/*getScripts: function() {
 		return [
-			'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js',
+			'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'
 		]
-	},
+	},*/
 	
 	
 	getList: function(url) {
