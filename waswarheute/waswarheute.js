@@ -22,8 +22,8 @@ Module.register("waswarheute",{
 
 	// Override dom generator.
 	getDom: function() {
-		//var wrapper = document.createElement("div");
-		var wrapper = $( "<div></div>" );
+		var wrapper = document.createElement("div");
+		//var content = $( "<div></div>" );
 		wrapper.text = this.getList(this.config.feedURL);
 		
 		return wrapper;
