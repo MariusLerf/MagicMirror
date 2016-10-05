@@ -17,14 +17,23 @@ Module.register("waswarheute",{
 	
 	
 	getList: function(url) {
-		return("hallo");
+		
+		var content = "xx";
+		$.ajax({
+			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
+			dataType: 'json',
+			success: function(data) {
+				content = data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content;
+			}
+		});
+		
+		return(content);
 	},
 
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
-		var content = $( "<div>heey</div>" );
-		wrapper.innerHTML = this.getList(this.config.feedURL) + content.html();
+		wrapper.innerHTML = this.getList(this.config.feedURL);
 		
 		return wrapper;
 	}
