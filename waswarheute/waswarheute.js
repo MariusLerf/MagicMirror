@@ -1,13 +1,8 @@
-/* global Module */
-
 /* Magic Mirror
- * Module: HelloWorld
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
+ * Module: WasWarHeute
  */
 
-Module.register("helloworld",{
+Module.register("waswarheute",{
 
 	// Default module config.
 	defaults: {
