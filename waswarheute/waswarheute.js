@@ -9,6 +9,12 @@ Module.register("waswarheute",{
 		feedURL: ""
 	},
 	
+	getScripts: function() {
+		return [
+			'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js',
+		]
+	},
+	
 	
 	getList: function(url) {
 		return("hallo");
@@ -16,9 +22,9 @@ Module.register("waswarheute",{
 
 	// Override dom generator.
 	getDom: function() {
-		var wrapper = document.createElement("div");
-		
-		wrapper.innerHTML = this.getList(this.config.feedURL);
+		//var wrapper = document.createElement("div");
+		var wrapper = $( "<div></div>" );
+		wrapper.text = this.getList(this.config.feedURL);
 		
 		return wrapper;
 	}
