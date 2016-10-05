@@ -12,11 +12,9 @@ Module.register("waswarheute",{
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = getList(this.config.feedURL);
+		
+		wrapper.innerHTML = this.config.feedURL;
+		
 		return wrapper;
-	},
-	
-	getList: function(url) {
-		return("hello");
 	}
 });
