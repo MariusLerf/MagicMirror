@@ -6,18 +6,13 @@ Module.register("waswarheute",{
 
 	// Default module config.
 	defaults: {
-		feedURL: "https://de.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday&feedformat=atom"
+		text: "Hello World!"
 	},
 
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
-    		wrapper.attr("id", "content");
-		wrapper.innerHTML = getList(this.config.feedURL);
+		wrapper.innerHTML = this.config.text;
 		return wrapper;
-	}
-
-	function getList(url) {
-		return("hi");
 	}
 });
