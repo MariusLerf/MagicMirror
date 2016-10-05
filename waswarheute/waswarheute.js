@@ -16,5 +16,10 @@ Module.register("waswarheute",{
 		wrapper.innerHTML = this.config.feedURL;
 		
 		return wrapper;
+	},
+	
+	
+	getList: function() {
+		
 	}
 });
