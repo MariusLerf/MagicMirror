@@ -8,6 +8,11 @@ Module.register("waswarheute",{
 	defaults: {
 		feedURL: ""
 	},
+	
+	
+	getList: function() {
+		return("hallo");
+	},
 
 	// Override dom generator.
 	getDom: function() {
@@ -16,10 +21,5 @@ Module.register("waswarheute",{
 		wrapper.innerHTML = this.config.feedURL + getList();
 		
 		return wrapper;
-	},
-	
-	
-	getList: function() {
-		return("hallo");
 	}
 });
