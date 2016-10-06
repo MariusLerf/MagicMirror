@@ -18,7 +18,7 @@ Module.register("waswarheute",{
 	},
 	
 	start: function() {
-		var self = this;
+		/*var self = this;
 		$.ajax({
 			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(self.config.feedURL),
 			dataType: 'json',
@@ -28,7 +28,7 @@ Module.register("waswarheute",{
 				self.cleanUp();
 				self.updateDom();
 			}
-		});
+		});*/
 	},
 	
 	cleanUp: function() {
@@ -57,7 +57,7 @@ Module.register("waswarheute",{
 	getDom: function() {
 		
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = this.feed.html();//this.getList(this.config.feedURL);
+		wrapper.innerHTML = this.feed;//.html();
 		return wrapper;
 	}
 });
