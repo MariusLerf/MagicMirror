@@ -36,11 +36,11 @@ Module.register("waswarheute",{
 		this.feed.find( "#content img" ).parent().parent().remove();
 		//Remove links
 		this.feed.find( "#content a" ).contents().unwrap();
-		/*/Reverse list order
+		//Reverse list order
 		this.feed.find( "#content ul" ).children().each( function(i, li) {
-			this.feed.find( "#content ul" ).prepend(li);
+			//this.feed.find( "#content ul" ).prepend(li);
 		});
-		//Create Table
+		/*/Create Table
 		$( "#content" ).append( "<table></table>");	
 		$( "#content ul li" ).each( function() {
 			var span = $( this ).find( "span" );
