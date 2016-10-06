@@ -6,8 +6,8 @@ module.exports = NodeHelper.create({
 	start: function() {
 		var self = this
 		setInterval(function() {
-			self.sendSocketNotification("TEXT", "heyhey " + i);
-			i++;
+			self.sendSocketNotification("TEXT", "heyhey " + self.i);
+			self.i++;
 		}, 1000);
 	},
 });
