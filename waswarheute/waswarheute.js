@@ -32,13 +32,14 @@ Module.register("waswarheute",{
 	},
 	
 	cleanUp: function() {
+		var self = this;
 		//Remove image
-		this.feed.find( "#content img" ).parent().parent().remove();
+		self.feed.find( "#content img" ).parent().parent().remove();
 		//Remove links
-		this.feed.find( "#content a" ).contents().unwrap();
+		self.feed.find( "#content a" ).contents().unwrap();
 		//Reverse list order
-		this.feed.find( "#content ul" ).children().each( function(i, li) {
-			this.feed.find( "#content ul" ).prepend(li);
+		self.feed.find( "#content ul" ).children().each( function(i, li) {
+			self.feed.find( "#content ul" ).prepend(li);
 		});
 		/*/Create Table
 		$( "#content" ).append( "<table></table>");	
