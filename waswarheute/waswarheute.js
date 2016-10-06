@@ -57,7 +57,12 @@ Module.register("waswarheute",{
 	getDom: function() {
 		
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = this.feed.html();
+		try {
+			wrapper.innerHTML = this.feed.html();
+		}
+		catch(err) {
+			wrapper.innerHTML = "Error loading RSS-Feed...</br>Config ok?";	
+		}
 		return wrapper;
 	}
 });
