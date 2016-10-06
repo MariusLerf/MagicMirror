@@ -26,7 +26,7 @@ Module.register("waswarheute",{
 				self.feed = $( "<span><div id='content' class='xsmall'></div></span>" );
 				self.feed.find( "#content" ).append(data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content);
 				//self.cleanUp();
-				//self.updateDom();
+				self.updateDom();
 			}
 		});
 	},
