@@ -19,9 +19,10 @@ Module.register("waswarheute",{
 	
 	start: function() {
 		var self = this;
+		self.updateContent();
 		setInterval(function () {
 			self.updateContent();
-		}, 1 * (1000 * 60 * 60));
+		}, 3600000); //1 hour
 	},
 	
 	updateContent: function() {
