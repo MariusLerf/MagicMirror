@@ -50,7 +50,7 @@ Module.register("waswarheute",{
 			var t2 = self.feed.find( this ).html().substring(13);
 			self.feed.find( "table" ).append("<tr><td>" + t1 + "</td><td>" + t2 + "</td></tr>");
 		});
-		//$( "ul" ).remove();
+		self.feed.find( "ul" ).remove();
 	},
 
 	// Override dom generator.
