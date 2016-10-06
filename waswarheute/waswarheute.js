@@ -32,13 +32,13 @@ Module.register("waswarheute",{
 	},
 	
 	cleanUp: function() {
-		/*var self = this;
+		var self = this;
 		//Remove image
 		self.feed.find( "#content img" ).parent().parent().remove();
 		//Remove links
 		self.feed.find( "#content a" ).contents().unwrap();
 		//Reverse list order
-		self.feed.find( "#content ul" ).children().each( function(i, li) {
+		/*self.feed.find( "#content ul" ).children().each( function(i, li) {
 			self.feed.find( "#content ul" ).prepend(li);
 		});
 		//Create Table
