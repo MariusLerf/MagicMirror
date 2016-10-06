@@ -43,13 +43,13 @@ Module.register("waswarheute",{
 		});
 		//Create Table
 		self.feed.find( "#content" ).append( "<table></table>");	
-		//$( "#content ul li" ).each( function() {
+		self.feed.find( "#content ul li" ).each( function() {
 		//	var span = $( this ).find( "span" );
 		//	var t1 =  span.attr( "title" ).replace( "Heute v", "V0" ) + " (" + span.html() + "):" ;
 		//	span.remove();
 		//	var t2 = $( this ).html().substring(13);
 		//	$( "table" ).append("<tr><td>" + t1 + "</td><td>" + t2 + "</td></tr>");
-		//});
+		});
 		//$( "ul" ).remove();
 	},
 
