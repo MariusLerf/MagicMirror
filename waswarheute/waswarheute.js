@@ -9,7 +9,7 @@ Module.register("waswarheute",{
 		feedURL: ""
 	},
 	
-	text: "abc",
+	feed: "aaa",
 	
 	getScripts: function() {
 		return [
@@ -18,11 +18,15 @@ Module.register("waswarheute",{
 	},
 	
 	start: function() {
-		this.sendSocketNotification('START', "");
-	},
-	
-	socketNotificationReceived: function(notification, payload) {
-		this.text = payload;
+		var self = this;
+		$.ajax({
+			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://de.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday&feedformat=atom"),
+			dataType: 'json',
+			success: function(data) {
+				self.feed = data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content;
+				self.updateDom();
+			}
+		});
 	},
 	
 	getList: function(url) {
@@ -34,7 +38,7 @@ Module.register("waswarheute",{
 	getDom: function() {
 		
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = this.text;//this.getList(this.config.feedURL);
+		wrapper.innerHTML = this.feed;//this.getList(this.config.feedURL);
 		return wrapper;
 	}
 });
