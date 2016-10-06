@@ -42,7 +42,7 @@ Module.register("waswarheute",{
 			self.feed.find( "#content ul" ).prepend(li);
 		});
 		/Create Table
-		self.feed.find( "#content" ).append( "<table></table>");	
+		//self.feed.find( "#content" ).append( "<table></table>");	
 		//$( "#content ul li" ).each( function() {
 		//	var span = $( this ).find( "span" );
 		//	var t1 =  span.attr( "title" ).replace( "Heute v", "V0" ) + " (" + span.html() + "):" ;
