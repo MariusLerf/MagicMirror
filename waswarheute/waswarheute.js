@@ -15,6 +15,11 @@ Module.register("waswarheute",{
 		]
 	},
 	
+	start: function() {
+		setInterval(function() {
+			self.updateDom();
+		}, 2000);
+	},
 	
 	getList: function(url) {
 		
@@ -32,9 +37,10 @@ Module.register("waswarheute",{
 
 	// Override dom generator.
 	getDom: function() {
-		var wrapper = document.createElement("div");
-		wrapper.innerHTML = this.getList(this.config.feedURL);
+		var d = new Date();
 		
+		var wrapper = document.createElement("div");
+		wrapper.innerHTML = d.getTime();//this.getList(this.config.feedURL);
 		return wrapper;
 	}
 });
