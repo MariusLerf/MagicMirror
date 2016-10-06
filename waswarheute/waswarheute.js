@@ -30,7 +30,7 @@ Module.register("waswarheute",{
 	getDom: function() {
 		
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = this.text;//this.getList(this.config.feedURL);
+		wrapper.innerHTML = text;//this.getList(this.config.feedURL);
 		return wrapper;
 	}
 });
