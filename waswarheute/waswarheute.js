@@ -35,6 +35,8 @@ Module.register("waswarheute",{
 		var self = this;
 		//Remove image
 		self.feed.find( "#content img" ).parent().parent().remove();
+		//Remove <small> elements
+		self.feed.find( "#content small" ).remove();
 		//Remove links
 		self.feed.find( "#content a" ).contents().unwrap();
 		//Reverse list order
