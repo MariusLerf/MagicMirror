@@ -9,7 +9,7 @@ Module.register("waswarheute",{
 		feedURL: ""
 	},
 	
-	feed: $( "<div id='content' class='small'>asdf</div>" ),
+	feed: "",
 	
 	getScripts: function() {
 		return [
