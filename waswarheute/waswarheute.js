@@ -46,7 +46,7 @@ Module.register("waswarheute",{
 		self.feed.find( "#content ul li" ).each( function() {
 			var span = self.feed.find( this ).find( "span" );
 			
-			var rep = span.attr("title").replace( "Heute v", "V0" );
+		//	var rep = span.attr("title").replace( "Heute v", "V0" );
 			self.feed.find( "#content" ).append("" + ", ");
 			
 		//	var t1 =  span.attr( "title" ).replace( "Heute v", "V0" ) + " (" + span.html() + "):" ;
