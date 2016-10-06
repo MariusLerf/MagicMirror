@@ -48,7 +48,7 @@ Module.register("waswarheute",{
 		//Change year display
 		self.feed.find( "#content ul li" ).each( function() {
 			var span = self.feed.find( this ).find( "span[title]" ).wrap("<b>");
-			var t1 =  "<b>  (" + span.attr( "title" ).replace( "Heute v", "V" ) + ")</b>";
+			var t1 =  "<b>  (" + span.attr( "title" ).replace( "Heute v", "V" ) + "):</b>";
 			span.after(t1);
 		});
 		//Remove list bullets
