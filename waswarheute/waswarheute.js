@@ -38,7 +38,7 @@ Module.register("waswarheute",{
 		this.feed.find( "#content a" ).contents().unwrap();
 		//Reverse list order
 		this.feed.find( "#content ul" ).children().each( function(i, li) {
-			//this.feed.find( "#content ul" ).prepend(li);
+			this.feed.find( "#content ul" ).prepend(li);
 		});
 		/*/Create Table
 		$( "#content" ).append( "<table></table>");	
