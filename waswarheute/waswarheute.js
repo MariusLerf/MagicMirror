@@ -9,6 +9,8 @@ Module.register("waswarheute",{
 		feedURL: ""
 	},
 	
+	text: "abc",
+	
 	getScripts: function() {
 		return [
 			'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'
@@ -16,23 +18,11 @@ Module.register("waswarheute",{
 	},
 	
 	start: function() {
-		var self = this;
-		setInterval(function() {
-			self.updateDom();
-		}, 2000);
+		
 	},
 	
 	getList: function(url) {
-		
 		var content = "xx";
-		$.ajax({
-			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
-			dataType: 'json',
-			success: function(data) {
-				content = data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content;
-			}
-		});
-		
 		return(content);
 	},
 
@@ -40,7 +30,7 @@ Module.register("waswarheute",{
 	getDom: function() {
 		
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = Math.random();//this.getList(this.config.feedURL);
+		wrapper.innerHTML = this.text;//this.getList(this.config.feedURL);
 		return wrapper;
 	}
 });
