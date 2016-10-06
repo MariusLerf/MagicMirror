@@ -38,7 +38,7 @@ Module.register("waswarheute",{
 		//Remove links
 		self.feed.find( "#content a" ).contents().unwrap();
 		//Reverse list order
-		/*self.feed.find( "#content ul" ).children().each( function(i, li) {
+		self.feed.find( "#content ul" ).children().each( function(i, li) {
 			self.feed.find( "#content ul" ).prepend(li);
 		});
 		//Create Table
@@ -50,7 +50,7 @@ Module.register("waswarheute",{
 		//	var t2 = self.feed.find( this ).html().substring(13);
 		//	self.feed.find( "table" ).append("<tr><td>" + t1 + "</td><td>" + t2 + "</td></tr>");
 		});
-		//$( "ul" ).remove();*/
+		//$( "ul" ).remove();
 	},
 
 	// Override dom generator.
