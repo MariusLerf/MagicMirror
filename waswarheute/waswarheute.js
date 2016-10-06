@@ -18,6 +18,10 @@ Module.register("waswarheute",{
 	},
 	
 	start: function() {
+		this.updateContent();
+	},
+	
+	updateContent: function() {
 		var self = this;
 		$.ajax({
 			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(self.config.feedURL),
