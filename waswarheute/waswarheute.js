@@ -37,6 +37,8 @@ Module.register("waswarheute",{
 		self.feed.find( "#content img" ).parent().parent().remove();
 		//Remove <small> elements
 		self.feed.find( "#content small" ).remove();
+		//Remove unnecessary span
+		self.feed.find( "#content span:not([title])").remove();
 		//Remove links
 		self.feed.find( "#content a" ).contents().unwrap();
 		//Reverse list order
@@ -45,8 +47,8 @@ Module.register("waswarheute",{
 		});
 		//Change year display
 		self.feed.find( "#content ul li" ).each( function() {
-			var span = self.feed.find( this ).find( "span[title]" );
-			var t1 =  " (" + span.attr( "title" ).replace( "Heute v", "V" ) + ")";
+			var span = self.feed.find( this ).find( "span[title]" ).wrap("<b>");
+			var t1 =  "<b>  (" + span.attr( "title" ).replace( "Heute v", "V" ) + ")</b>";
 			span.after(t1);
 		});
 		//Remove list bullets
