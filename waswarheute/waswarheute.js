@@ -34,13 +34,13 @@ Module.register("waswarheute",{
 	cleanUp: function() {
 		//Remove image
 		this.feed.find( "#content img" ).parent().parent().remove();
-		/*//Remove links
-		$( "#content a" ).contents().unwrap();
+		//Remove links
+		this.feed.find( "#content a" ).contents().unwrap();
 		//Reverse list order
-		$( "#content ul" ).children().each( function(i, li) {
-			$( "#content ul" ).prepend(li);
+		this.feed.find( "#content ul" ).children().each( function(i, li) {
+			this.feed.find( "#content ul" ).prepend(li);
 		});
-		//Create Table
+		/*/Create Table
 		$( "#content" ).append( "<table></table>");	
 		$( "#content ul li" ).each( function() {
 			var span = $( this ).find( "span" );
