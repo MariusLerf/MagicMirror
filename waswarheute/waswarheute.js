@@ -45,7 +45,7 @@ Module.register("waswarheute",{
 		self.feed.find( "#content" ).append( "<table></table>");	
 		self.feed.find( "#content ul li" ).each( function() {
 			var span = self.feed.find( this ).find( "span" );
-			self.feed.find( "#content" ).append("hi");
+			self.feed.find( "#content" ).append(span.attr("title") + ", ");
 		//	var t1 =  span.attr( "title" ).replace( "Heute v", "V0" ) + " (" + span.html() + "):" ;
 		//	span.remove();
 		//	var t2 = self.feed.find( this ).html().substring(13);
