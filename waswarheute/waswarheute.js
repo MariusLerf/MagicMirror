@@ -41,6 +41,11 @@ Module.register("waswarheute",{
 		self.feed.find( "#content ul" ).children().each( function(i, li) {
 			self.feed.find( "#content ul" ).prepend(li);
 		});
+		self.feed.find( "#content ul li" ).each( function() {
+			var span = self.feed.find( this ).find( "span[title]" );
+			var t1 =  " (" + span.attr( "title" ).replace( "Heute v", "V" ) + ")";
+			span.after(t1);
+		});
 	},
 
 	// Override dom generator.
