@@ -57,7 +57,7 @@ Module.register("waswarheute",{
 	getDom: function() {
 		
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = this.feed;//.html();
+		wrapper.innerHTML = this.feed.html();
 		return wrapper;
 	}
 });
