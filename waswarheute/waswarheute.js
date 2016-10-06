@@ -6,7 +6,7 @@ Module.register("waswarheute",{
 
 	// Default module config.
 	defaults: {
-		feedURL: ""
+		feedURL: "https://de.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday&feedformat=atom"
 	},
 	
 	feed: "",
