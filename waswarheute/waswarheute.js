@@ -18,7 +18,7 @@ Module.register("waswarheute",{
 	},
 	
 	start: function() {
-		
+		this.sendSocketNotification('START', "");
 	},
 	
 	socketNotificationReceived: function(notification, payload) {
