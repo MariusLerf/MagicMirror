@@ -21,6 +21,10 @@ Module.register("waswarheute",{
 		
 	},
 	
+	socketNotificationReceived: function(notification, payload) {
+		this.text = payload;
+	},
+	
 	getList: function(url) {
 		var content = "xx";
 		return(content);
@@ -30,7 +34,7 @@ Module.register("waswarheute",{
 	getDom: function() {
 		
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = text;//this.getList(this.config.feedURL);
+		wrapper.innerHTML = this.text;//this.getList(this.config.feedURL);
 		return wrapper;
 	}
 });
