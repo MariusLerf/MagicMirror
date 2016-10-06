@@ -37,10 +37,9 @@ Module.register("waswarheute",{
 
 	// Override dom generator.
 	getDom: function() {
-		var d = new Date();
 		
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = d.getTime();//this.getList(this.config.feedURL);
+		wrapper.innerHTML = Math.random();//this.getList(this.config.feedURL);
 		return wrapper;
 	}
 });
