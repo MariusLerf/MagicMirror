@@ -23,7 +23,7 @@ Module.register("waswarheute",{
 			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://de.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday&feedformat=atom"),
 			dataType: 'json',
 			success: function(data) {
-				self.feed = $( "<span class='xsmall'>helou</span>" );
+				self.feed = $( "<span><span class='xsmall'>helou</span></span>" );
 				//self.feed.find( "#content" ).append(data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content);
 				self.updateDom();
 			}
