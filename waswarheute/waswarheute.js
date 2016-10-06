@@ -32,7 +32,7 @@ Module.register("waswarheute",{
 	},
 	
 	cleanUp: function() {
-		var self = this;
+		/*var self = this;
 		//Remove image
 		self.feed.find( "#content img" ).parent().parent().remove();
 		//Remove links
@@ -50,7 +50,7 @@ Module.register("waswarheute",{
 		//	var t2 = self.feed.find( this ).html().substring(13);
 		//	self.feed.find( "table" ).append("<tr><td>" + t1 + "</td><td>" + t2 + "</td></tr>");
 		});
-		//$( "ul" ).remove();
+		//$( "ul" ).remove();*/
 	},
 
 	// Override dom generator.
