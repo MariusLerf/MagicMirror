@@ -20,7 +20,7 @@ Module.register("waswarheute",{
 	start: function() {
 		var self = this;
 		$.ajax({
-			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://de.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday&feedformat=atom"),
+			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(self.config.feedURL),
 			dataType: 'json',
 			success: function(data) {
 				self.feed = $( "<span><div id='content' class='xsmall'></div></span>" );
