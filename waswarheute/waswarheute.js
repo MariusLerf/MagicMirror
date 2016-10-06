@@ -16,6 +16,7 @@ Module.register("waswarheute",{
 	},
 	
 	start: function() {
+		var self = this;
 		setInterval(function() {
 			self.updateDom();
 		}, 2000);
