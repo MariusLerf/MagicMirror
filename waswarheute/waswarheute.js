@@ -1,4 +1,4 @@
-e/* Magic Mirror
+/* Magic Mirror
  * Module: WasWarHeute
  */
 
