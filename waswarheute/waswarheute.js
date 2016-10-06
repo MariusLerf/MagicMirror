@@ -41,22 +41,22 @@ Module.register("waswarheute",{
 		self.feed.find( "#content ul" ).children().each( function(i, li) {
 			self.feed.find( "#content ul" ).prepend(li);
 		});
-		//Create Table
-		//self.feed.find( "#content" ).append( "<table></table>");	
-		//self.feed.find( "#content ul li" ).each( function() {
-			//var span = self.feed.find( this ).find( "span" );
-			//var t1 =  span.attr( "title" ).replace( "Heute v", "V0" ) + " (" + span.html() + "):" ;
-			//span.remove();
-			//var t2 = self.feed.find( this ).html().substring(13);
-			//self.feed.find( "table" ).append("<tr><td>" + t1 + "</td><td>" + t2 + "</td></tr>");
-		//});
-		//self.feed.find( "ul" ).remove();
+		/*/Create Table
+		$( "#content" ).append( "<table></table>");	
+		$( "#content ul li" ).each( function() {
+			var span = $( this ).find( "span" );
+			var t1 =  span.attr( "title" ).replace( "Heute v", "V0" ) + " (" + span.html() + "):" ;
+			span.remove();
+			var t2 = $( this ).html().substring(13);
+			$( "table" ).append("<tr><td>" + t1 + "</td><td>" + t2 + "</td></tr>");
+		});
+		$( "ul" ).remove();*/
 	},
 
 	// Override dom generator.
 	getDom: function() {
 		
-		var wrapper = documente.createElement("div");
+		var wrapper = document.createElement("div");
 		wrapper.innerHTML = this.feed.html();//this.getList(this.config.feedURL);
 		return wrapper;
 	}
