@@ -38,7 +38,7 @@ Module.register("waswarheute",{
 				self.feed.find( "#content" ).append(data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content + "</br>url: " + self.config.feedURL);
 				//self.data.header = data.responseData.feed.entries[data.responseData.feed.entries.length - 1].title;
 				self.cleanUp();
-				self.updateDom(100);
+				self.updateDom(1000);
 			}
 		});
 	},
