@@ -28,7 +28,7 @@ Module.register("bandsintown",{
 	//First update & set interval to 1h
 	start: function() {
 		this.updateList();
-		setInterval(updateDom(), 1000);
+		setInterval(this.updateDom(), 1000);
 	},
 
 	// Override dom generator.
