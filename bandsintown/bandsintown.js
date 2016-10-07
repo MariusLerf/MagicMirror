@@ -27,13 +27,14 @@ Module.register("bandsintown",{
 	
 	//First update & set interval to 1h
 	start: function() {
-		this.update();
+		this.updateList();
+		setInterval(updateDom(), 1000);
 	},
 
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
-    		wrapper.innerHTML = this.getList().html();
+    		wrapper.innerHTML = this.updateCounter;//this.getList().html();
 		return wrapper;
 	},
 	
@@ -44,7 +45,7 @@ Module.register("bandsintown",{
 	//Functions
 	/////////////////////////////////////
 	
-	update: function() {
+	updateList: function() {
 		var self = this;
 		self.eventList = [];
 		self.errorList = [];
