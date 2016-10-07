@@ -10,7 +10,7 @@ Module.register("waswarheute",{
 	},
 	
 	feed: "",
-	header: "",
+	header: "asdf",
 	
 	i: 0,
 	
