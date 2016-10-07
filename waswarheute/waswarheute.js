@@ -17,7 +17,7 @@ Module.register("waswarheute",{
 		]
 	},
 	
-	start: function() {
+	start: function() { Log.log(this.name + ' is started!');
 		var self = this;
 		self.updateContent();
 		setInterval(function () {
