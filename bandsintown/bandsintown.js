@@ -33,7 +33,7 @@ Module.register("bandsintown",{
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
-    		wrapper.innerHTML = this.getList();
+    		wrapper.innerHTML = this.getList().html();
 		return wrapper;
 	},
 	
