@@ -26,6 +26,10 @@ Module.register("waswarheute",{
 		}, 60000);//3600000); //1 hour
 	},
 	
+	getHeader: function() {
+	    return this.data.header + ' Foo Bar';
+	},
+	
 	updateContent: function() {
 		var self = this;
 		$.ajax({
