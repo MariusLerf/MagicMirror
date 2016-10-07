@@ -116,7 +116,7 @@ Module.register("bandsintown",{
 	},
 	
 	getList: function() {
-		var list = $( "<div id='content' class='xsmall'><ul>hey</ul></div>");
+		var list = $( "<span><div id='content' class='xsmall'><ul>hey</ul></div></span>");
 		var oldDate = new Date(2000, 1, 1);
 		/*this.eventList.forEach( function(event) {
 			if (this.config.favCountry == "" || this.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
