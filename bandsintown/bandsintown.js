@@ -126,7 +126,7 @@ Module.register("bandsintown",{
 					list.append("<li>" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + "</li>");
 					oldDate = date;
 				}
-				list.append("<li><span>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>");
+				list.append("<li class='xsmall'><span>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>");
 			}
 		});
 		return list;
