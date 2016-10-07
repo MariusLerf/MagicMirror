@@ -30,7 +30,7 @@ Module.register("waswarheute",{
 	updateContent: function() {
 		var self = this;
 		$.ajax({
-			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(self.config.feedURL),
+			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://cdn.rawgit.com/mariusl95/MagicMirror/master/waswarheute/test.xml");//self.config.feedURL),
 			dataType: 'json',
 			success: function(data) {
 				self.feed = $( "<span><div id='content' class='xsmall bright'></div></span>" );
