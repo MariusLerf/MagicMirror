@@ -34,12 +34,12 @@ Module.register("bandsintown",{
 	// Override dom generator.
 	getDom: function() {
 		var self = this;
-		var t = "";
+		var wrapper = document.createElement("div");
+		/*var t = "";
 		this.eventList.forEach(function(event) {
 			self.t += event.title + "</br>";
 		};
-		var wrapper = document.createElement("div");
-    		wrapper.innerHTML = t;//this.getList().html();
+    		wrapper.innerHTML = t;//this.getList().html();*/
 		return wrapper;
 	},
 	
