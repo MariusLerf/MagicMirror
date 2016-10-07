@@ -10,6 +10,7 @@ Module.register("waswarheute",{
 	},
 	
 	feed: "",
+	header: "",
 	
 	i: 0,
 	
@@ -17,6 +18,10 @@ Module.register("waswarheute",{
 		return [
 			'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'
 		]
+	},
+	
+	getHeader: function() {
+		return this.header;
 	},
 	
 	start: function() {
@@ -36,7 +41,7 @@ Module.register("waswarheute",{
 			success: function(data) {
 				self.feed = $( "<span><div id='content' class='xsmall bright'></div></span>" );
 				self.feed.find( "#content" ).append(data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content + "</br>url: " + self.config.feedURL);
-				self.data.header = "helou";
+				self.header = "helou";
 				//self.data.header = data.responseData.feed.entries[data.responseData.feed.entries.length - 1].title;
 				self.cleanUp();
 				self.updateDom(1000);
