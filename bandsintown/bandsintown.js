@@ -117,16 +117,16 @@ Module.register("bandsintown",{
 	
 	getList: function() {
 		var self = this;
-		var list = $( "<span><div id='content' class='xsmall'><ul>hey</ul></div></span>");
+		var list = $( "<span><div id='content' class='xsmall'><ul></ul></div></span>");
 		var oldDate = new Date(2000, 1, 1);
 		this.eventList.forEach( function(event) {
 			if (self.config.favCountry == "" || self.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
 				var date = new Date(Date.parse(event.datetime));
 				if (!(date.getDate() == oldDate.getDate() && date.getMonth() == oldDate.getMonth() && date.getFullYear() == oldDate.getFullYear())) {
-					list.append("<li class='dayHeader'>" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + "</li>");
+					list.append("<li>" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + "</li>");
 					oldDate = date;
 				}
-				list.append("<li><span class='bandname'>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>");
+				list.append("<li><span>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>");
 			}
 		});
 		return list;
