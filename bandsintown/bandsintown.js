@@ -27,12 +27,13 @@ Module.register("bandsintown",{
 	
 	//First update & set interval to 1h
 	start: function() {
+		
 	},
 
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
-    		wrapper.innerHTML = "hi";
+    		wrapper.innerHTML = this.getList();
 		return wrapper;
 	},
 	
