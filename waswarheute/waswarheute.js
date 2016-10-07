@@ -36,6 +36,7 @@ Module.register("waswarheute",{
 			success: function(data) {
 				self.feed = $( "<span><div id='content' class='xsmall bright'></div></span>" );
 				self.feed.find( "#content" ).append(data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content);
+				self.header = data.responseData.feed.entries[data.responseData.feed.entries.length - 1].title;
 				self.cleanUp();
 				self.updateDom(1000);
 			}
