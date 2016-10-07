@@ -88,6 +88,26 @@ Module.register("bandsintown",{
 		
 	},
 	
+	addEvent: function(event) {
+		var self = this;
+		if (self.eventList.length == 0) { 
+			self.eventList.push(event);
+		}
+		else {
+			var d = Date.parse(event.datetime);
+			var skip = false;
+			self.eventList.forEach( function(listEvent, i) {
+				if (!skip){
+					if (d > Date.parse(listEvent.datetime)) {
+						self.eventList.splice(i, 0, event);
+						skip = true;
+					}
+				}
+			});
+			if (!skip) self.eventList.push(event);
+		}
+	},
+	
 	
 	
 });
