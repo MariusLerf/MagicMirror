@@ -20,7 +20,7 @@ Module.register("waswarheute",{
 	},
 	
 	start: function() {
-		this.config.feedURL = "https://raw.githubusercontent.com/mariusl95/MagicMirror/master/waswarheute/test.txt";
+		this.config.feedURL = "https://raw.githubusercontent.com/mariusl95/MagicMirror/master/waswarheute/xml.txt";
 		var self = this;
 		self.updateContent();
 		setInterval(function () {
