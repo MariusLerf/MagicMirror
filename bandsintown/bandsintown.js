@@ -72,14 +72,14 @@ Module.register("bandsintown",{
 						});
 					}
 					if (self.updateCounter == self.config.bands.length) {
-						self.finishUpdate();
+						self.updateDom(1000);
 					}
 				},
 				
 				error: function(arg1, arg2) {
 					self.updateCounter++;
 					if (self.updateCounter == self.config.bands.length) {
-						self.finishUpdate();
+						self.updateDom(1000);
 					}
 				}
 			});
