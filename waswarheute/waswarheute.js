@@ -30,6 +30,7 @@ Module.register("waswarheute",{
 		self.updateContent();
 		setInterval(function () {
 			self.updateContent();
+			self.getHeader();
 		}, 5000);//3600000); //1 hour
 	},
 	
