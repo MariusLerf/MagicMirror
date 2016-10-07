@@ -11,8 +11,6 @@ Module.register("waswarheute",{
 	
 	feed: "",
 	
-	i: 0,
-	
 	getScripts: function() {
 		return [
 			'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'
@@ -35,7 +33,7 @@ Module.register("waswarheute",{
 			dataType: 'json',
 			success: function(data) {
 				self.feed = $( "<span><div id='content' class='xsmall bright'></div></span>" );
-				self.feed.find( "#content" ).append(data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content + "</br>url: " + self.config.feedURL);
+				self.feed.find( "#content" ).append(data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content);
 				//self.data.header = data.responseData.feed.entries[data.responseData.feed.entries.length - 1].title;
 				self.cleanUp();
 				self.updateDom(1000);
@@ -69,10 +67,9 @@ Module.register("waswarheute",{
 
 	// Override dom generator.
 	getDom: function() {
-		this.i++;
 		var wrapper = document.createElement("div");
 		try {
-			wrapper.innerHTML = this.feed.html() + this.i;
+			wrapper.innerHTML = this.feed.html();
 		}
 		catch(err) {
 		}
