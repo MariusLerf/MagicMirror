@@ -117,7 +117,7 @@ Module.register("bandsintown",{
 	
 	getList: function() {
 		var list = $( "<div id='content' class='xsmall'><ul></ul></div>");
-		var oldDate = new Date(2000, 1, 1);
+		/*var oldDate = new Date(2000, 1, 1);
 		this.eventList.forEach( function(event) {
 			if (this.config.favCountry == "" || this.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
 				var date = new Date(Date.parse(event.datetime));
@@ -127,7 +127,7 @@ Module.register("bandsintown",{
 				}
 				list.append("<li><span class='bandname'>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>");
 			}
-		});
+		});*/
 		return list;
 	}
 	
