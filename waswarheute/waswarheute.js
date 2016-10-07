@@ -11,6 +11,8 @@ Module.register("waswarheute",{
 	
 	feed: "",
 	
+	i: 0,
+	
 	getScripts: function() {
 		return [
 			'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'
@@ -22,7 +24,7 @@ Module.register("waswarheute",{
 		self.updateContent();
 		setInterval(function () {
 			self.updateContent();
-		}, 3600000); //1 hour
+		}, 5000);//3600000); //1 hour
 	},
 	
 	updateContent: function() {
@@ -65,10 +67,10 @@ Module.register("waswarheute",{
 
 	// Override dom generator.
 	getDom: function() {
-		
+		this.i++;
 		var wrapper = document.createElement("div");
 		try {
-			wrapper.innerHTML = this.feed.html();
+			wrapper.innerHTML = this.feed.html() + this.i;
 		}
 		catch(err) {
 			wrapper.innerHTML = "Error loading RSS-Feed...</br>Config ok?";	
