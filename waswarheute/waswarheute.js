@@ -20,13 +20,12 @@ Module.register("waswarheute",{
 	},
 	
 	start: function() {
-		this.config.feedURL = "https://raw.githubusercontent.com/mariusl95/MagicMirror/master/waswarheute/xml.txt";
 		var self = this;
 		self.updateContent();
 		setInterval(function () {
 			self.updateContent();
 			self.getHeader();
-		}, 5000);//3600000); //1 hour
+		}, 60000);//3600000); //1 hour
 	},
 	
 	updateContent: function() {
