@@ -2,11 +2,10 @@
  * Module: WasWarHeute
  */
 
-Module.register("waswarheute",{
+Module.register("bandsintown",{
 
 	// Default module config.
 	defaults: {
-		feedURL: "https://de.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday&feedformat=atom"
 	},
 	
 	getScripts: function() {
