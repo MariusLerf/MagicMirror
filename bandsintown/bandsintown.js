@@ -39,7 +39,7 @@ Module.register("bandsintown",{
 		this.eventList.forEach(function(event) {
 			self.t += event.title + "</br>";
 		};*/
-    		wrapper.innerHTML = this.eventList.length;//this.getList().html();
+    		wrapper.innerHTML = this.getList().html();
 		return wrapper;
 	},
 	
