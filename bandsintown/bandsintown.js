@@ -116,9 +116,9 @@ Module.register("bandsintown",{
 	},
 	
 	getList: function() {
-		var list = $( "<div id='content' class='xsmall'><ul>heyhey</ul></div>");
-		/*var oldDate = new Date(2000, 1, 1);
-		this.eventList.forEach( function(event) {
+		var list = $( "<div id='content' class='xsmall'><ul>hey</ul></div>");
+		var oldDate = new Date(2000, 1, 1);
+		/*this.eventList.forEach( function(event) {
 			if (this.config.favCountry == "" || this.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
 				var date = new Date(Date.parse(event.datetime));
 				if (!(date.getDate() == oldDate.getDate() && date.getMonth() == oldDate.getMonth() && date.getFullYear() == oldDate.getFullYear())) {
