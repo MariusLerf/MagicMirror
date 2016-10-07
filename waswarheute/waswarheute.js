@@ -45,7 +45,7 @@ Module.register("waswarheute",{
 				self.header = "helou";
 				//self.data.header = data.responseData.feed.entries[data.responseData.feed.entries.length - 1].title;
 				self.cleanUp();
-				self.updateDom(1000);
+				self.updateDom(100);
 			}
 		});
 	},
