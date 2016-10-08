@@ -10,7 +10,7 @@ Module.register("bandsintown",{
 		searchRadius: 150,
 		bands: ["Eluveitie", "Metallica", "Varg", "Hecht", "Troubas Kater", "Disturbed", "Epica"],
 		favCountry: "switzerland",
-		maxEntries: 11,
+		maxEntries: 12,
 		fade: true,
 	},
 	
@@ -41,7 +41,7 @@ Module.register("bandsintown",{
 		this.eventList.forEach(function(event) {
 			self.t += event.title + "</br>";
 		};*/
-    		wrapper.innerHTML = this.getList().html() + this.eventList.length;
+    		wrapper.innerHTML = this.getList().html();
 		return wrapper;
 	},
 	
