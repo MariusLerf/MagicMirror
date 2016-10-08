@@ -120,10 +120,9 @@ Module.register("bandsintown",{
 	getList: function() {
 		var self = this;
 		var list = $( "<span><div id='content' class='xsmall'><ul style='list-style-type:none;'></ul></div></span>");
-		var i = 0;
 		var oldDate = new Date(2000, 1, 1);
 		this.eventList.forEach( function(event) {
-			if ((self.config.favCountry == "" || self.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) && i < self.config.maxEntries) {
+			if (self.config.favCountry == "" || self.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
 				var date = new Date(Date.parse(event.datetime));
 				if (!(date.getDate() == oldDate.getDate() && date.getMonth() == oldDate.getMonth() && date.getFullYear() == oldDate.getFullYear())) {
 					list.find( "#content ul" ).append("<li><b>" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + "</b></li>");
@@ -131,7 +130,6 @@ Module.register("bandsintown",{
 				}
 				list.find( "#content ul" ).append("<li><span>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>");
 			}
-			i++;
 		});
 		return list;
 	}
