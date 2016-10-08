@@ -125,7 +125,7 @@ Module.register("bandsintown",{
 			if (self.config.favCountry == "" || self.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
 				var date = new Date(Date.parse(event.datetime));
 				if (!(date.getDate() == oldDate.getDate() && date.getMonth() == oldDate.getMonth() && date.getFullYear() == oldDate.getFullYear())) {
-					list.find( "#content ul" ).append("<li><b>" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + "</b></li>");
+					list.find( "#content ul" ).append("<li><b>" + date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + "</b></li>");
 					oldDate = date;
 				}
 				list.find( "#content ul" ).append("<li><span>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>");
