@@ -121,8 +121,7 @@ Module.register("bandsintown",{
 		var self = this;
 		var list = $( "<span><div id='content' class='xsmall'><ul style='list-style-type:none;'></ul></div></span>");
 		var oldDate = new Date(2000, 1, 1);
-		var listCount; if (self.eventList < self.config.maxEntries || self.config.maxEntries <= 0) listCount = self.eventList.length; else listCount = self.config.maxEntries;
-		var i = listCount - 1;
+		var i; if (self.eventList < self.config.maxEntries || self.config.maxEntries <= 0) i = self.eventList.length - 1; else i = self.config.maxEntries - 1;
 		var eventi = self.eventList.length -1;
 		var fadei; if (self.config.fade) fadei = 6; else fadei = 0;
 		while (i >= 0) {
