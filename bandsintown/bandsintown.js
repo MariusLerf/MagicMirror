@@ -30,17 +30,13 @@ Module.register("bandsintown",{
 	//First update & set interval to 1h
 	start: function() {
 		this.updateList();
-		setInterval(function() {this.updateDom()}, 1000);
+		setInterval(function() {this.updateDom(1000)}, 1000);
 	},
 
 	// Override dom generator.
 	getDom: function() {
 		var self = this;
 		var wrapper = document.createElement("div");
-		/*var t = "";
-		this.eventList.forEach(function(event) {
-			self.t += event.title + "</br>";
-		};*/
     		wrapper.innerHTML = this.getEventList().html();
 		return wrapper;
 	},
@@ -130,7 +126,7 @@ Module.register("bandsintown",{
 	
 	getEventList: function() {
 		var self = this;
-		if (self.eventList.length == 0) return $( "No Gigs :(</br><span class='xsmall'>(with your configuration...)</span>" );
+		if (true/*self.eventList.length == 0*/) return $( "No Gigs :(</br><span class='xsmall'>(with your configuration...)</span>" );
 		var list = $( "<span><div id='content' class='xsmall'><ul style='list-style-type:none;'></ul></div></span>");
 		var oldDate = new Date(2000, 1, 1);
 		var i; if (self.eventList < self.config.maxEntries || self.config.maxEntries <= 0) i = self.eventList.length - 1; else i = self.config.maxEntries - 1;
