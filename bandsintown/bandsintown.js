@@ -169,9 +169,12 @@ Module.register("bandsintown",{
 	getErrorList: function() {
 		var self = this;
 		var list = "asdf";
-		self.errorList.forEach( function(error) {
-			list += error.errorBand + ": " + error.errorText + "</br>";
+		var moreErrors = false;
+		self.errorList.forEach( function(error, i) {
+			if (i > 11) moreErrors = true;
+			else list += error.errorBand + ": " + error.errorText + "</br>";
 		});
+		if (moreErrors) list += self.errorList.length + " more errors... :(";
 		return list;
 	}
 	
