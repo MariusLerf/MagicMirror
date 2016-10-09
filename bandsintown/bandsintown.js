@@ -130,7 +130,7 @@ Module.register("bandsintown",{
 	
 	getEventList: function() {
 		var self = this;
-		if (self.eventList.length == 0) return $( "No Gigs :(</br><span class='xsmall'>(with your configuration...)</span>" );
+		if (true/*self.eventList.length == 0*/) return $( "No Gigs :(</br><span class='xsmall'>(with your configuration...)</span>" );
 		var list = $( "<span><div id='content' class='xsmall'><ul style='list-style-type:none;'></ul></div></span>");
 		var oldDate = new Date(2000, 1, 1);
 		var i; if (self.eventList < self.config.maxEntries || self.config.maxEntries <= 0) i = self.eventList.length - 1; else i = self.config.maxEntries - 1;
