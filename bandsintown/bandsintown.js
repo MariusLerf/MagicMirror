@@ -32,8 +32,9 @@ Module.register("bandsintown",{
 	//First update & set interval to 1/2h
 	start: function() {
 		var self = this;
+		self.updateList(0);
 		setInterval(function() {
-			self.updateList();
+			self.updateList(0);
 		}, 1000 * 60 * 30);
 	},
 
@@ -52,7 +53,7 @@ Module.register("bandsintown",{
 	//Functions
 	/////////////////////////////////////
 	
-	updateList: function() {
+	updateList: function(fade) {
 		var self = this;
 		self.eventList = [];
 		self.errorList = [];
@@ -85,7 +86,7 @@ Module.register("bandsintown",{
 					}
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
-						self.updateDom();
+						self.updateDom(fade);
 					}
 				},
 				
@@ -93,7 +94,7 @@ Module.register("bandsintown",{
 					self.updateCounter++;
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
-						self.updateDom();
+						self.updateDom(fade);
 					}
 				}
 			});
