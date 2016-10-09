@@ -123,24 +123,23 @@ Module.register("bandsintown",{
 		var oldDate = new Date(2000, 1, 1);
 		var i; if (self.eventList < self.config.maxEntries || self.config.maxEntries <= 0) i = self.eventList.length - 1; else i = self.config.maxEntries - 1;
 		var eventi = self.eventList.length -1;
-		var fadei; if (self.config.fade) fadei = 6; else fadei = 0;
 		while (i >= 0) {
 			var event = self.eventList[eventi];
 			if (self.config.favCountry == "" || self.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
 				var date = new Date(Date.parse(event.datetime));
 				if (!(date.getDate() == oldDate.getDate() && date.getMonth() == oldDate.getMonth() && date.getFullYear() == oldDate.getFullYear())) {
 					var li = list.find( "#content ul" ).append("<li><b>" + date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + "</b></li>").children().last();
-					if (self.config.fade & fadei - i > 0) li.css("opacity", 1 - (fadei - i) * 0.14285714285714285714285714285714);
 					oldDate = date;
 				}
 				var li = list.find( "#content ul" ).append("<li class='bright'><b>" + event.artists[0].name + "</b> @ " + event.venue.name + " in " + event.formatted_location + "</li>").children().last();
-				if (self.config.fade & fadei - i > 0) li.css("opacity", 1 - (fadei - i) * 0.14285714285714285714285714285714);
-				//li.append(li.css("opacity));
 				i--;
 			}
 			eventi--;
 			if (eventi < 0) i = -1;
 		}
+		list.find( "li" ).slice(-7).each( function(i, li) {
+			$( li ).css("opacity", 1 - i * (1/8));
+		});
 		return list;
 	}
 	
