@@ -138,7 +138,7 @@ Module.register("bandsintown",{
 			if (eventi < 0) i = -1;
 		}
 		list.find( "li" ).slice(-7).each( function(i, li) {
-			$( li ).css("opacity", 1 - i * (1/8));
+			$( li ).css("opacity", 1 - i * (1/7));
 		});
 		return list;
 	}
