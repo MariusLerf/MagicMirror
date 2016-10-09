@@ -19,6 +19,8 @@ Module.register("bandsintown",{
 	noGigs: [],
 	errorList: [],
 	updateCounter: 0,
+	firstUpdate = false,
+	
 	
 	//Get jQuery
 	getScripts: function() {
@@ -78,6 +80,7 @@ Module.register("bandsintown",{
 							self.addEvent(event);
 						});
 					}
+					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
 						self.updateDom(1000);
 					}
@@ -85,6 +88,7 @@ Module.register("bandsintown",{
 				
 				error: function(arg1, arg2) {
 					self.updateCounter++;
+					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
 						self.updateDom(1000);
 					}
@@ -126,7 +130,10 @@ Module.register("bandsintown",{
 	
 	getEventList: function() {
 		var self = this;
-		if (true/*self.eventList.length == 0*/) return $( "<span>No Gigs :(</br><span class='xsmall'>(with your configuration...)</span></span>" );
+		if (true/*self.eventList.length == 0*/) {
+			if (!self.firstUpdate) return $( "<span>Loading...</span>" );
+			return $( "<span>No Gigs :(</br><span class='xsmall'>(with your configuration...)</span></span>" );
+		}
 		var list = $( "<span><div id='content' class='xsmall'><ul style='list-style-type:none;'></ul></div></span>");
 		var oldDate = new Date(2000, 1, 1);
 		var i; if (self.eventList < self.config.maxEntries || self.config.maxEntries <= 0) i = self.eventList.length - 1; else i = self.config.maxEntries - 1;
