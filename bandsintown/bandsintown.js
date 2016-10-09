@@ -125,16 +125,22 @@ Module.register("bandsintown",{
 		var i = listCount - 1;
 		var eventi = self.eventList.length -1;
 		var fadei; if (self.config.fade) fadei = 6; else fadei = 0;
-		this.eventList.forEach( function(event) {
+		while (i >= 0) {
+			var event = self.eventList[eventi];
 			if (self.config.favCountry == "" || self.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
 				var date = new Date(Date.parse(event.datetime));
 				if (!(date.getDate() == oldDate.getDate() && date.getMonth() == oldDate.getMonth() && date.getFullYear() == oldDate.getFullYear())) {
-					list.find( "#content ul" ).append("<li><b>" + date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + "</b></li>");
+					var li = list.find( "#content ul" ).append("<li><b>" + date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + "</b></li>").children().last();
+					if (self.config.fade & fadei - i > 0) li.css("opacity", 1 - (fadei - i) * 0.14285714285714285714285714285714);
 					oldDate = date;
 				}
-				list.find( "#content ul" ).append("<li><span>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>");
+				var li = list.find( "#content ul" ).append("<li><span>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>").children().last();
+				if (config.fade & fadei - i > 0) li.css("opacity", 1 - (fadei - i) * 0.14285714285714285714285714285714);
+				i--;
 			}
-		});
+			eventi--;
+			if (eventi < 0) i = -1;
+		}
 		return list;
 	}
 	
