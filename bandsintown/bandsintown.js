@@ -168,7 +168,7 @@ Module.register("bandsintown",{
 	
 	getErrorList: function() {
 		var self = this;
-		var list = "";
+		var list = "asdf";
 		self.errorList.forEach( function(error) {
 			list += error.errorBand + ": " + error.errorText;
 		});
