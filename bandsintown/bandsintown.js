@@ -117,6 +117,15 @@ Module.register("bandsintown",{
 		}
 	},
 	
+	checkDouble: function() {
+		var self = this;
+		self.config.bands.forEach( function(band, i) {
+			while (self.config.bands.indexOf(band) != self.config.bands.lastIndexOf(band)) {
+				self.config.bands.splice(self.config.bands.indexOf(band), 1);
+			}
+		});
+	}
+	
 	getEventList: function() {
 		var self = this;
 		var list = $( "<span><div id='content' class='xsmall'><ul style='list-style-type:none;'></ul></div></span>");
