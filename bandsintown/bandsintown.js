@@ -9,7 +9,7 @@ Module.register("bandsintown",{
 		location: "spiez, ch",
 		searchRadius: 150,
 		bands: ["Eluveitie", "Metallica", "Varg", "Hecht", "Troubas Kater", "Disturbed", "Epica"],
-		favCountry: "switzerland",
+		filterCountry: "switzerland",
 		maxEntries: 10,
 		fade: true,
 	},
@@ -125,7 +125,7 @@ Module.register("bandsintown",{
 		var eventi = self.eventList.length -1;
 		while (i >= 0) {
 			var event = self.eventList[eventi];
-			if (self.config.favCountry == "" || self.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
+			if (self.config.filterCountry == "" || self.config.filterCountry.toLowerCase() == event.venue.country.toLowerCase()) {
 				var date = new Date(Date.parse(event.datetime));
 				if (!(date.getDate() == oldDate.getDate() && date.getMonth() == oldDate.getMonth() && date.getFullYear() == oldDate.getFullYear())) {
 					var li = list.find( "#content ul" ).append("<li><b>" + date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + "</b></li>").children().last();
