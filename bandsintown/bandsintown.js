@@ -87,7 +87,7 @@ Module.register("bandsintown",{
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
 						self.updateDom(fade);
-						if (self.errorList.length > 0) self.sendNotification("SHOW_ALERT", {title: "<span style='color: red;'>Bandsintown - Errors</span>", message: self.getErrorList(), timer: 10000}); 
+						if (self.errorList.length > 0) self.sendNotification("SHOW_ALERT", {title: "<span style='color: red; border-bottom: 1px solid white;'>Bandsintown - Errors</span>", message: self.getErrorList(), timer: 10000}); 
 					}
 				},
 				
@@ -96,7 +96,7 @@ Module.register("bandsintown",{
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
 						self.updateDom(fade);
-						if (self.errorList.length > 0) self.sendNotification("SHOW_ALERT", {title: "<span style='color: red;'>Bandsintown - Errors</span>", message: self.getErrorList(), timer: 10000}); 
+						if (self.errorList.length > 0) self.sendNotification("SHOW_ALERT", {title: "<span style='color: red; border-bottom: 1px solid white;'>Bandsintown - Errors</span>", message: self.getErrorList(), timer: 10000}); 
 					}
 				}
 			});
