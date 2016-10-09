@@ -171,7 +171,7 @@ Module.register("bandsintown",{
 		var list = "asdf";
 		var moreErrors = false;
 		self.errorList.forEach( function(error, i) {
-			if (i > 11) moreErrors = true;
+			if (i > 10) moreErrors = true;
 			else list += error.errorBand + ": " + error.errorText + "</br>";
 		});
 		if (moreErrors) list += self.errorList.length + " more errors... :(";
