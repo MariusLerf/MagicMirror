@@ -134,7 +134,7 @@ Module.register("bandsintown",{
 					if (self.config.fade & fadei - i > 0) li.css("opacity", 1 - (fadei - i) * 0.14285714285714285714285714285714);
 					oldDate = date;
 				}
-				var li = list.find( "#content ul" ).append("<li><span>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>").children().last();
+				var li = list.find( "#content ul" ).append("<li class='bright'><span>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>").children().last();
 				if (self.config.fade & fadei - i > 0) li.css("opacity", 1 - (fadei - i) * 0.14285714285714285714285714285714);
 				//li.append(li.css("opacity));
 				i--;
