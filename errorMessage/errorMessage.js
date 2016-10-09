@@ -23,7 +23,7 @@ Module.register("errorMessage",{
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
-    		wrapper.innerHTHL("<div>teeest</div>");
+    		wrapper.innerHTHL("hi");
 		return wrapper;
 	}
 });
