@@ -130,7 +130,7 @@ Module.register("bandsintown",{
 	
 	getEventList: function() {
 		var self = this;
-		if (true/*self.eventList.length == 0*/) {
+		if (self.eventList.length == 0) {
 			if (!self.firstUpdate) return $( "<span>Loading...</span>" );
 			return $( "<span>No Gigs :(</br><span class='xsmall'>(with your configuration...)</span></span>" );
 		}
