@@ -19,7 +19,7 @@ Module.register("bandsintown",{
 	noGigs: [],
 	errorList: [],
 	updateCounter: 0,
-	firstUpdate = false,
+	firstUpdate: false,
 	
 	
 	//Get jQuery
