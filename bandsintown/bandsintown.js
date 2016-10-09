@@ -87,7 +87,7 @@ Module.register("bandsintown",{
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
 						self.updateDom(fade);
-						self.sendNotification("SHOW_ALERT", {title: "Errors", message: self.getErrorList(), timer: 10000}); 
+						self.sendNotification("SHOW_ALERT", {title: "Bandsintown - Errors", message: self.getErrorList(), timer: 10000}); 
 					}
 				},
 				
@@ -96,7 +96,7 @@ Module.register("bandsintown",{
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
 						self.updateDom(fade);
-						self.sendNotification("SHOW_ALERT", {title: "Errors", message: self.getErrorList(), timer: 10000}); 
+						self.sendNotification("SHOW_ALERT", {title: "Bandsintown - Errors", message: self.getErrorList(), timer: 10000}); 
 					}
 				}
 			});
@@ -168,9 +168,9 @@ Module.register("bandsintown",{
 	
 	getErrorList: function() {
 		var self = this;
-		var list = $( "" );
+		var list = "";
 		self.errorList.forEach( function(error) {
-			list.append(error.errorBand + ": " + error.errorText);
+			list += error.errorBand + ": " + error.errorText;
 		});
 		return list.html();
 	}
