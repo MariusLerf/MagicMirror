@@ -8,9 +8,9 @@ Module.register("bandsintown",{
 	defaults: {
 		location: "spiez, ch",
 		searchRadius: 150,
-		bands: ["Eluveitie", "Metallica", "Varg", "Hecht", "Troubas Kater", "Disturbed", "Epica"],
-		filterCountry: "switzerland",
-		maxEntries: 10,
+		bands: ["Eluveitie", "Metallica"],
+		filterCountry: "",
+		maxEntries: -1,
 		fade: true,
 	},
 	
