@@ -29,12 +29,12 @@ Module.register("bandsintown",{
 		]
 	},
 	
-	//First update & set interval to 1h
+	//First update & set interval to 1/2h
 	start: function() {
 		var self = this;
 		setInterval(function() {
 			self.updateList();
-		}, 1000);
+		}, 1000 * 60 * 30);
 	},
 
 	// Override dom generator.
@@ -85,7 +85,7 @@ Module.register("bandsintown",{
 					}
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
-						self.updateDom(1000);
+						self.updateDom();
 					}
 				},
 				
@@ -93,7 +93,7 @@ Module.register("bandsintown",{
 					self.updateCounter++;
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
-						self.updateDom(1000);
+						self.updateDom();
 					}
 				}
 			});
