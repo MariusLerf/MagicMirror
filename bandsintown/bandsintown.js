@@ -59,6 +59,7 @@ Module.register("bandsintown",{
 		
 		self.checkDouble();
 		
+		if (self.config.bands.length == 0) self.firstUpdate = true;
 		self.config.bands.forEach( function(band) {
 			var url = "";
 			if (self.config.searchRadius == 0) url = "http://api.bandsintown.com/artists/" + band + "/events/search.json?api_version=2.0&app_id=MagicMirror&location=" + self.config.location;
