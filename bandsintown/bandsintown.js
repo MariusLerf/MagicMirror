@@ -87,7 +87,7 @@ Module.register("bandsintown",{
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
 						self.updateDom(fade);
-						self.sendNotification("SHOW_ALERT", {title: "<span css: 'color: red'>Bandsintown - Errors</span>", message: self.getErrorList(), timer: 10000}); 
+						if (self.errorList.length > 0) self.sendNotification("SHOW_ALERT", {title: "<span css: 'color: red'>Bandsintown - Errors</span>", message: self.getErrorList(), timer: 10000}); 
 					}
 				},
 				
@@ -96,7 +96,7 @@ Module.register("bandsintown",{
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
 						self.updateDom(fade);
-						self.sendNotification("SHOW_ALERT", {title: "<span css: 'color: red'>Bandsintown - Errors</span>", message: self.getErrorList(), timer: 10000}); 
+						if (self.errorList.length > 0) self.sendNotification("SHOW_ALERT", {title: "<span css: 'color: red'>Bandsintown - Errors</span>", message: self.getErrorList(), timer: 10000}); 
 					}
 				}
 			});
@@ -168,7 +168,7 @@ Module.register("bandsintown",{
 	
 	getErrorList: function() {
 		var self = this;
-		var list = "asdf";
+		var list = "";
 		var moreErrors = false;
 		self.errorList.forEach( function(error, i) {
 			if (i > 9) moreErrors = true;
