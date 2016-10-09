@@ -87,7 +87,7 @@ Module.register("bandsintown",{
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
 						self.updateDom(fade);
-						self.sendNotification("SHOW_ALERT", {type: "notification", title: "test", message: "heyhey"}); 
+						self.sendNotification("SHOW_ALERT", {title: "Konzerte", message: self.eventList.length + " Konzerte gefunden", timer: 10000}); 
 					}
 				},
 				
