@@ -32,7 +32,7 @@ Module.register("bandsintown",{
 	//First update & set interval to 1/2h
 	start: function() {
 		var self = this;
-		self.updateList(0);
+		self.updateList(1000);
 		setInterval(function() {
 			self.updateList(0);
 		}, 1000 * 60 * 30);
