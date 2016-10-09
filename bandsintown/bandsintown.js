@@ -170,7 +170,7 @@ Module.register("bandsintown",{
 		var self = this;
 		var list = "asdf";
 		self.errorList.forEach( function(error) {
-			list += error.errorBand + ": " + error.errorText;
+			list += error.errorBand + ": " + error.errorText + "\n;
 		});
 		return list;
 	}
