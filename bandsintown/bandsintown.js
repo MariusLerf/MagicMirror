@@ -87,7 +87,7 @@ Module.register("bandsintown",{
 					self.firstUpdate = true;
 					if (self.updateCounter == self.config.bands.length) {
 						self.updateDom(fade);
-						self.sendNotification("SHOW_ALERT", {title: "Bandsintown - Errors", message: "asdfghf, timer: 10000}); 
+						self.sendNotification("SHOW_ALERT", {title: "Bandsintown - Errors", message: "asdfghf", timer: 10000}); 
 					}
 				},
 				
