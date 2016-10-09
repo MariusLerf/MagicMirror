@@ -13,8 +13,7 @@ Module.register("errorMessage",{
 			'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'
 		]
 	},
-  
-  getStyles: function() {
+	getStyles: function() {
 		return ["errorMessage.css"];
 	},
 	
@@ -24,7 +23,7 @@ Module.register("errorMessage",{
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
-    		wrapper.innerHTHL("<div class='testDiv'>teeest</div>");
+    		//wrapper.innerHTHL("<div class='testDiv'>teeest</div>");
 		return wrapper;
 	}
 });
