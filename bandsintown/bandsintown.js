@@ -124,7 +124,7 @@ Module.register("bandsintown",{
 		var listCount; if (self.eventList < self.config.maxEntries || self.config.maxEntries <= 0) listCount = self.eventList.length; else listCount = self.config.maxEntries;
 		var i = listCount - 1;
 		var eventi = self.eventList.length -1;
-		var fadei; if (self.config.fade) fadei = 4; else fadei = 0;
+		var fadei; if (self.config.fade) fadei = 6; else fadei = 0;
 		while (i >= 0) {
 			var event = self.eventList[eventi];
 			if (self.config.favCountry == "" || self.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
