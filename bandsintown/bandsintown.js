@@ -174,7 +174,7 @@ Module.register("bandsintown",{
 			if (i > 9) moreErrors = true;
 			else list += error.errorBand + ": " + error.errorText + "</br>";
 		});
-		if (moreErrors) list += self.errorList.length + " more errors... :(";
+		if (moreErrors) list += self.errorList.length - 10 + " more errors... :(";
 		return list;
 	}
 	
