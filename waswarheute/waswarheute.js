@@ -76,6 +76,7 @@ Module.register("waswarheute",{
 			wrapper.innerHTML = this.feed.html();
 		}
 		catch(err) {
+			wrapper.innerHTML = "Loading...";
 		}
 		return wrapper;
 	}
