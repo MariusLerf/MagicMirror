@@ -31,9 +31,9 @@ Module.register("bandsintown",{
 	
 	//First update & set interval to 1h
 	start: function() {
-		this.updateList();
+		var self = this;
 		setInterval(function() {
-			this.updateDom(1000);
+			self.updateList();
 		}, 1000);
 	},
 
