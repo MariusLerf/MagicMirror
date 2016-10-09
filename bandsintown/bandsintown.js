@@ -11,7 +11,7 @@ Module.register("bandsintown",{
 		bands: ["Eluveitie", "Metallica"],
 		filterCountry: "",
 		maxEntries: -1,
-		fade: false,
+		fade: true,
 	},
 	
 	//Variables
@@ -137,9 +137,11 @@ Module.register("bandsintown",{
 			eventi--;
 			if (eventi < 0) i = -1;
 		}
-		list.find( "li" ).slice(-7).each( function(i, li) {
-			$( li ).css("opacity", 1 - i * (1/7));
-		});
+		if (self.config.fade) {
+			list.find( "li" ).slice(-7).each( function(i, li) {
+				$( li ).css("opacity", 1 - i * (1/7));
+			});
+		}
 		return list;
 	}
 	
