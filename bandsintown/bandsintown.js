@@ -124,7 +124,7 @@ Module.register("bandsintown",{
 		var listCount; if (self.eventList < self.config.maxEntries || self.config.maxEntries <= 0) listCount = self.eventList.length; else listCount = self.config.maxEntries;
 		var i = listCount - 1;
 		var eventi = self.eventList.length -1;
-		var fadei; if (self.config.fade) fadei = 6; else fadei = 0;
+		var fadei; if (self.config.fade) fadei = 4; else fadei = 0;
 		while (i >= 0) {
 			var event = self.eventList[eventi];
 			if (self.config.favCountry == "" || self.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
@@ -136,6 +136,7 @@ Module.register("bandsintown",{
 				}
 				var li = list.find( "#content ul" ).append("<li><span>" + event.artists[0].name + "</span> @ " + event.venue.name + " in " + event.formatted_location + "</li>").children().last();
 				if (config.fade & fadei - i > 0) li.css("opacity", 1 - (fadei - i) * 0.14285714285714285714285714285714);
+				li.append(li.css("opacity));
 				i--;
 			}
 			eventi--;
