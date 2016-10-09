@@ -41,7 +41,7 @@ Module.register("bandsintown",{
 		this.eventList.forEach(function(event) {
 			self.t += event.title + "</br>";
 		};*/
-    		wrapper.innerHTML = this.getList().html();
+    		wrapper.innerHTML = this.getEventList().html();
 		return wrapper;
 	},
 	
@@ -117,10 +117,14 @@ Module.register("bandsintown",{
 		}
 	},
 	
-	getList: function() {
+	getEventList: function() {
 		var self = this;
 		var list = $( "<span><div id='content' class='xsmall'><ul style='list-style-type:none;'></ul></div></span>");
 		var oldDate = new Date(2000, 1, 1);
+		var listCount; if (self.eventList < self.config.maxEntries || self.config.maxEntries <= 0) listCount = self.eventList.length; else listCount = self.config.maxEntries;
+		var i = listCount - 1;
+		var eventi = self.eventList.length -1;
+		var fadei; if (self.config.fade) fadei = 6; else fadei = 0;
 		this.eventList.forEach( function(event) {
 			if (self.config.favCountry == "" || self.config.favCountry.toLowerCase() == event.venue.country.toLowerCase()) {
 				var date = new Date(Date.parse(event.datetime));
