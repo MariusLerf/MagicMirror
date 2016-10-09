@@ -11,7 +11,7 @@ Module.register("bandsintown",{
 		bands: ["Eluveitie", "Metallica"],
 		filterCountry: "",
 		maxEntries: -1,
-		fade: true,
+		fade: false,
 	},
 	
 	//Variables
