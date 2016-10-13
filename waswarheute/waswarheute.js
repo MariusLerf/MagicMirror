@@ -32,7 +32,7 @@ Module.register("waswarheute",{
 			dataType: 'json',
 			success: function(data) {
 				self.feed = $( "<span><div id='content' class='xsmall bright'></div></span>" );
-				self.feed.find( "#content" ).append(data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content + "adaf");
+				self.feed.find( "#content" ).append("zadaf" + data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content + "adaf");
 				self.cleanUp();
 				self.updateDom(1000);
 			}
