@@ -22,12 +22,7 @@ Module.register("waswarheute",{
 		self.updateContent();
 		setInterval(function () {
 			self.updateContent();
-			self.getHeader();
-		}, 60000);//3600000); //1 hour
-	},
-	
-	getHeader: function() {
-	    return this.data.header + ' Foo Bar';
+		}, 3600000);//3600000); //1 hour
 	},
 	
 	updateContent: function() {
@@ -36,10 +31,8 @@ Module.register("waswarheute",{
 			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(self.config.feedURL),
 			dataType: 'json',
 			success: function(data) {
-				self.feed = "";
-				self.feed = $( "<span><div id='content' class='xsmall bright'></div></span>" );
+				self.feed = $( "<span>agagag<div id='content' class='xsmall bright'></div></span>" );
 				self.feed.find( "#content" ).append(data.responseData.feed.entries[data.responseData.feed.entries.length - 1].content);
-				//self.data.header = data.responseData.feed.entries[data.responseData.feed.entries.length - 1].title;
 				self.cleanUp();
 				self.updateDom(1000);
 			}
