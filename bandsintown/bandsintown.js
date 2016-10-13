@@ -149,7 +149,7 @@ Module.register("bandsintown",{
 			if (self.config.filterCountry == "" || self.config.filterCountry.toLowerCase() == event.venue.country.toLowerCase()) {
 				var date = new Date(Date.parse(event.datetime));
 				if (!(date.getDate() == oldDate.getDate() && date.getMonth() == oldDate.getMonth() && date.getFullYear() == oldDate.getFullYear())) {
-					var li = list.find( "#content ul" ).append("<li><b>" + date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + "</b></li>").children().last();
+					var li = list.find( "#content ul" ).append("<li style='border-top: 1px solid white;'><b>" + date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + "</b></li>").children().last();
 					oldDate = date;
 				}
 				var li = list.find( "#content ul" ).append("<li class='bright'><b>" + event.artists[0].name + "</b> @ " + event.venue.name + " in " + event.formatted_location + "</li>").children().last();
